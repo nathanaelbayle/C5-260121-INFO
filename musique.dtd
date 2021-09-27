@@ -1,0 +1,9 @@
+<!ELEMENT musique (cd*)>
+<!ELEMENT cd (titre, artiste?, groupe?, chanson*)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT groupe (#PCDATA)>
+<!ELEMENT artiste (nom, prenom)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT chanson (#PCDATA)>
+<!ATTLIST chanson duree CDATA #IMPLIED>

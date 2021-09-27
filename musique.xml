@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE musique SYSTEM "musique.dtd">
+<musique>
+    <cd>
+        <titre>It's a wonderful life</titre>
+        <groupe>Sparklehorse</groupe>
+        <chanson>Eyepennies</chanson>
+        <chanson>Dog door</chanson>
+    </cd>
+    <cd>
+        <titre>BOF le fabuleux destin ... </titre>
+        <artiste>
+            <nom>Tiersen</nom>
+            <prenom>Yann</prenom>
+        </artiste>
+        <chanson>A quai</chanson>
+        <chanson duree='3:40'>Comptine d'un autre été</chanson>
+    </cd>
+</musique>
