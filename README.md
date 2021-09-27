@@ -17,6 +17,12 @@ Il faut **imperativement** inclure le prologue à la première ligne du fichier 
 - Un nom ne débute pas par un nombre ou un caractère spécial
 - Un nom ne contient pas d'espaces
 
+## Utilisation
+
+Pour appliquer un document **DTD** sur un fichier **XML**, il faut utiliser `xmllint` de la manière suivante :
+````bash
+xmllint document.dtd --dtdvalid document.dtd --noout
+````
 
 ## DTD
 
