@@ -43,7 +43,7 @@ Balise simple :
 
 Balise par paire :
 ````xml
-<exemple>contenu</exemple>
+<exemple> contenu </exemple>
 ````
 
 Balise avec attribut :
