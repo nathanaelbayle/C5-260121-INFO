@@ -51,7 +51,7 @@ Balise avec attribut :
 <exemple attr="value"></exemple>
 ````
 
-### ELEMEENT
+### ELEMENT
 
 Syntaxe :
 ````xml
