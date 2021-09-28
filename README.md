@@ -103,6 +103,256 @@ repertoire contient **de 1 à n** personne :
 ````
 
 
+## XML Schema
+~~~~
+<?xml version="1.0"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema" targetNamespace="http://interoperabilnost.hr" xmlns="http://interoperabilnost.hr" elementFormDefault="qualified">
+  <xs:element name="note">
+    <xs:complexType>
+      <xs:sequence>
+	<xs:element name="to" type="xs:string"/>
+	<xs:element name="from" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema> 
+~~~~
+
+<br />
+
+## Simple Types
+
+  - xs:string
+  - xs:decimal
+  - xs:integer
+  - xs:boolean
+  - xs:date
+  - xs:time
+
+~~~~
+<xs:element name="start_date" type="xs:date"/>
+~~~~
+
+<br />
+
+## XML Facets
+
+  - xs:minInclusive 
+  - xs:maxInclusive
+  - xs:minExclusive
+  - xs:maxExclusive
+  - xs:enumeration
+  - xs:pattern
+  - xs:whiteSpace
+  - xs:length
+  - xs:minLength
+  - xs:maxLength
+  - xs:totalDigits
+  - xs:fractionDigits
+
+### Min-max
+
+~~~~
+<xs:element name="age">
+  <xs:simpleType>
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="120"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:element> 
+~~~~
+
+### Enumeration
+
+~~~~
+<xs:element name="car" type="carType"/>
+
+<xs:simpleType name="carType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Audi"/>
+    <xs:enumeration value="Golf"/>
+    <xs:enumeration value="BMW"/>
+  </xs:restriction>
+</xs:simpleType>
+~~~~
+
+### Pattern
+
+- regexp
+
+~~~~
+<xs:restriction base="xs:string">
+  <xs:pattern value="([a-z])+"/>
+</xs:restriction>
+~~~~
+
+### WhiteSpace
+- preserve: keep whitespaces
+- replace: replace whitespace characters with spaces
+- collapse: collapse all whitespace characters to a single space
+
+~~~~
+<xs:restriction base="xs:string">
+  <xs:whiteSpace value="preserve"/>
+</xs:restriction>
+~~~~
+
+<br />
+
+## Complex Elements
+
+- empty elements
+- elements that contain only other elements
+- elements that contain only text
+- elements that contain both other elements and text
+
+### Complex Example
+~~~~
+<xs:element name="employee" type="personinfo"/>
+<xs:element name="student" type="personinfo"/>
+
+<xs:complexType name="personinfo">
+  <xs:sequence>
+    <xs:element name="firstname" type="xs:string"/>
+    <xs:element name="lastname" type="xs:string"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:element name="professor" type="fullpersoninfo">
+
+<xs:complexType name="fullpersoninfo">
+  <xs:complexContent>
+    <xs:extension base="personinfo">
+      <xs:sequence>
+        <xs:element name="address" type="xs:string"/>
+        <xs:element name="city" type="xs:string"/>
+        <xs:element name="country" type="xs:string"/>
+      </xs:sequence>
+    </xs:extension>
+  </xs:complexContent>
+</xs:complexType> 
+~~~~
+
+### Empty Element
+~~~~
+<xs:complexType name="prodtype">
+  <xs:attribute name="prodid" type="xs:positiveInteger"/>
+</xs:complexType>
+~~~~
+
+### Text only + attribute
+
+~~~~
+<xs:complexType name="shoetype">
+  <xs:simpleContent>
+    <xs:extension base="xs:integer">
+      <xs:attribute name="country" type="xs:string" />
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+~~~~
+
+### Integer only + Attirbute + attribute restriction
+
+~~~~
+<xs:complexType>
+  <xs:simpleContent>
+    <xs:extension base="xs:integer">
+      <xs:attribute name="unit">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:length value="3" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+~~~~
+<br />
+
+## Element Indicators
+
+- All - any order, only once
+- Choice - order, at most once
+- Sequence - order, only once
+
+- minOccurs
+- maxOccurs
+
+<br />
+
+## Data Types
+
+### String
+
+- xs:string
+
+### Date
+
+| Name          | Description   |
+| ------------- |-------------:|
+| xs:date      | YYYY-MM-DD |
+| xs:dateTime     | YYYY-MM-DDThh:mm:ss      |
+| xs:duration | PnYnMnDTnHnMnS |
+| xs:gDay | DD      |
+| xs:gMonth | MM      |
+| xs:gMonthDay | MM-DD      |
+| xs:gYear | YYYY      |
+| xs:gYearMonth | YYYY-MM      |
+| xs:time | hh:mm:ss      |
+
+
+### Numeric
+
+- xs:byte
+- xs:decimal
+- xs:int
+- xs:integer
+- xs:long
+- xs:negativeInteger
+- xs:nonNegativeInteger
+- xs:nonPositiveInteger
+- xs:positiveInteger
+- xs:short
+- xs:unsignedLong
+- xs:unsignedInt
+- xs:unsignedShort
+- xs:unsignedByte
+- xs:float
+- xs:double
+
+### Boolean
+
+- xs:boolean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
