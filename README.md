@@ -54,57 +54,26 @@ Balise par paire :
 
 Balise avec attribut :
 ````xml
-<exemple attr="value"></exemple>
+<exemple attr="value"> </exemple>
 ````
 
-### ELEMENT
+#### ELEMENT
 
-Syntaxe :
-````xml
-<!ELEMENT balise (contenu)>
-````
+| Syntaxe          | `<!ELEMENT balise (contenu)>`   |
+| ------------- |-------------|
+| Personne contient **1** nom    | `<!ELEMENT personne (nom)>` |
+| nom contient une **valeur simple** | `<!ELEMENT nom (#PCDATA)>` |
+| nom **contient ou non une valeur** | `<!ELEMENT nom EMPTY>`      |
+| personne contient 1 nom **et** 1 prenom | `<!ELEMENT personne (nom, prenom)>`      |
+| personne contient 1 nom **ou** 1 prenom | ``<!ELEMENT personne (nom \| prenom)>``   |
+| personne contient 1 nom **et eventuellement** 1 prenom | `<!ELEMENT personne (nom, prenom?)>`      |
+| repertoire contient **de 0 à n** personne | `<!ELEMENT repertoire (personne*)>`      |
+| repertoire contient **de 1 à n** personne  | `<!ELEMENT repertoire (personne+)>`     |
 
-personne contient 1 nom :
-````xml
-<!ELEMENT personne (nom)>
-````
-
-nom contient une **valeur simple**:
-````xml
-<!ELEMENT nom (#PCDATA)>
-````
-
-nom **contient ou non une valeur**:
-````xml
-<!ELEMENT nom EMPLT>
-````
-
-personne contient 1 nom **et** 1 prenom :
-````xml
-<!ELEMENT personne (nom, prenom)>
-````
-
-personne contient 1 nom **ou** 1 prenom :
-````xml
-<!ELEMENT personne (nom | prenom)>
-````
-personne contient 1 nom **et eventuellement** 1 prenom :
-````xml
-<!ELEMENT personne (nom, prenom?)>
-````
-repertoire contient **de 0 à n** personne :
-````xml
-<!ELEMENT repertoire (personne*)>
-````
-
-repertoire contient **de 1 à n** personne :
-````xml
-<!ELEMENT repertoire (personne+)>
-````
-
+&nbsp;
 
 ## XML Schema
-~~~~
+````xml
 <?xml version="1.0"?>
 <xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema" targetNamespace="http://interoperabilnost.hr" xmlns="http://interoperabilnost.hr" elementFormDefault="qualified">
   <xs:element name="note">
@@ -116,7 +85,7 @@ repertoire contient **de 1 à n** personne :
     </xs:complexType>
   </xs:element>
 </xs:schema> 
-~~~~
+````
 
 <br />
 
@@ -129,9 +98,9 @@ repertoire contient **de 1 à n** personne :
   - xs:date
   - xs:time
 
-~~~~
+````xml
 <xs:element name="start_date" type="xs:date"/>
-~~~~
+````
 
 <br />
 
@@ -152,7 +121,7 @@ repertoire contient **de 1 à n** personne :
 
 ### Min-max
 
-~~~~
+````xml
 <xs:element name="age">
   <xs:simpleType>
     <xs:restriction base="xs:integer">
@@ -161,11 +130,11 @@ repertoire contient **de 1 à n** personne :
     </xs:restriction>
   </xs:simpleType>
 </xs:element> 
-~~~~
+````
 
 ### Enumeration
 
-~~~~
+````xml
 <xs:element name="car" type="carType"/>
 
 <xs:simpleType name="carType">
@@ -175,28 +144,28 @@ repertoire contient **de 1 à n** personne :
     <xs:enumeration value="BMW"/>
   </xs:restriction>
 </xs:simpleType>
-~~~~
+````
 
 ### Pattern
 
 - regexp
 
-~~~~
+````xml
 <xs:restriction base="xs:string">
   <xs:pattern value="([a-z])+"/>
 </xs:restriction>
-~~~~
+````
 
 ### WhiteSpace
 - preserve: keep whitespaces
 - replace: replace whitespace characters with spaces
 - collapse: collapse all whitespace characters to a single space
 
-~~~~
+````xml
 <xs:restriction base="xs:string">
   <xs:whiteSpace value="preserve"/>
 </xs:restriction>
-~~~~
+````
 
 <br />
 
@@ -208,7 +177,7 @@ repertoire contient **de 1 à n** personne :
 - elements that contain both other elements and text
 
 ### Complex Example
-~~~~
+````xml
 <xs:element name="employee" type="personinfo"/>
 <xs:element name="student" type="personinfo"/>
 
@@ -232,18 +201,18 @@ repertoire contient **de 1 à n** personne :
     </xs:extension>
   </xs:complexContent>
 </xs:complexType> 
-~~~~
+````
 
 ### Empty Element
-~~~~
+````xml
 <xs:complexType name="prodtype">
   <xs:attribute name="prodid" type="xs:positiveInteger"/>
 </xs:complexType>
-~~~~
+````
 
 ### Text only + attribute
 
-~~~~
+````xml
 <xs:complexType name="shoetype">
   <xs:simpleContent>
     <xs:extension base="xs:integer">
@@ -251,11 +220,11 @@ repertoire contient **de 1 à n** personne :
     </xs:extension>
   </xs:simpleContent>
 </xs:complexType>
-~~~~
+````
 
 ### Integer only + Attirbute + attribute restriction
 
-~~~~
+````xml
 <xs:complexType>
   <xs:simpleContent>
     <xs:extension base="xs:integer">
@@ -269,7 +238,7 @@ repertoire contient **de 1 à n** personne :
     </xs:extension>
   </xs:simpleContent>
 </xs:complexType>
-~~~~
+````
 <br />
 
 ## Element Indicators
