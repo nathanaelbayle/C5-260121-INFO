@@ -124,12 +124,12 @@ Balise avec attribut :
 
 ## Simple Types
 
-  - xs:string
-  - xs:decimal
-  - xs:integer
-  - xs:boolean
-  - xs:date
-  - xs:time
+  - `xs:string`
+  - `xs:decimal`
+  - `xs:integer`
+  - `xs:boolean`
+  - `xs:date`
+  - `xs:time`
 
 ````xml
 <xs:element name="start_date" type="xs:date"/>
@@ -139,18 +139,18 @@ Balise avec attribut :
 
 ## XML Facets
 
-  - xs:minInclusive 
-  - xs:maxInclusive
-  - xs:minExclusive
-  - xs:maxExclusive
-  - xs:enumeration
-  - xs:pattern
-  - xs:whiteSpace
-  - xs:length
-  - xs:minLength
-  - xs:maxLength
-  - xs:totalDigits
-  - xs:fractionDigits
+  - `xs:minInclusive`
+  - `xs:maxInclusive`
+  - `xs:minExclusive`
+  - `xs:maxExclusive`
+  - `xs:enumeration`
+  - `xs:pattern`
+  - `xs:whiteSpace`
+  - `xs:length`
+  - `xs:minLength`
+  - `xs:maxLength`
+  - `xs:totalDigits`
+  - `xs:fractionDigits`
 
 ### Min-max
 
@@ -289,7 +289,7 @@ Balise avec attribut :
 
 ### String
 
-- xs:string
+- `xs:string`
 
 ### Date
 
@@ -308,26 +308,26 @@ Balise avec attribut :
 
 ### Numeric
 
-- xs:byte
-- xs:decimal
-- xs:int
-- xs:integer
-- xs:long
-- xs:negativeInteger
-- xs:nonNegativeInteger
-- xs:nonPositiveInteger
-- xs:positiveInteger
-- xs:short
-- xs:unsignedLong
-- xs:unsignedInt
-- xs:unsignedShort
-- xs:unsignedByte
-- xs:float
-- xs:double
+- `xs:byte`
+- `xs:decimal`
+- `xs:int`
+- `xs:integer`
+- `xs:long`
+- `xs:negativeInteger`
+- `xs:nonNegativeInteger`
+- `xs:nonPositiveInteger`
+- `xs:positiveInteger`
+- `xs:short`
+- `xs:unsignedLong`
+- `xs:unsignedInt`
+- `xs:unsignedShort`
+- `xs:unsignedByte`
+- `xs:float`
+- `xs:double`
 
 ### Boolean
 
-- xs:boolean
+- `xs:boolean`
 
 
 
