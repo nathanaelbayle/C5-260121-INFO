@@ -1,5 +1,12 @@
 # Data Base and XML
 
+
+## Table des Matières
+- [XML](#XML "Goto XML")
+  - [Définition eXtended Markup Langage](#objectives "Goto Objectives")
+
+
+
 ## XML
 ### Définition eXtended Markup Langage
 
@@ -22,6 +29,11 @@ Il faut **imperativement** inclure le prologue à la première ligne du fichier 
 Pour appliquer un document **DTD** sur un fichier **XML**, il faut utiliser `xmllint` de la manière suivante :
 ````bash
 xmllint document.dtd --dtdvalid document.dtd --noout
+````
+
+Pour appliquer un document **XML Schéma** sur un fichier **XML**, il faut utiliser `xmllint` de la manière suivante :
+````bach
+xmllint --schema document.xsd document.xml --noout
 ````
 
 ## DTD
