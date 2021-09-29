@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:schemaLocation="http://www.w3.org/2001/XMLSchema file:/home/nathanael/C5-260121-INFO/TP3/mediatheque.xsd">
+
+    <xsd:element name="mediatheque">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="musique">
+                    <xsd:simpleType name="musique">
+                        <xsd:restriction base="xsd:string">
+                            <xsd:pattern value="[A-Z]{3}[0-9]{3}"/>    
+                        </xsd:restriction>
+                    </xsd:simpleType>
+                </xsd:element>
+                
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+
+
+
+ 
+
+</xsd:schema>

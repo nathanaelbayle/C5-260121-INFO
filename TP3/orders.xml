@@ -1,0 +1,15 @@
+<orders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="orders.xsd">
+   <order date="2008-01-08" time="17:32:28">
+      <product serial="101-XX" number="12"/>
+      <product serial="102-XY" number="23"/>
+   </order>
+   <order date="2008-01-09" time="17:32:28">
+      <product serial="101-XX" number="32"/>
+   </order>
+   <catalog>
+      <product serial="101-XX">Product 1</product>
+      <product serial="101-ZA">Product 2</product>
+      <product serial="102-XY">Product 3</product>
+   </catalog>
+</orders>

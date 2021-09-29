@@ -1,0 +1,11 @@
+
+    <element name="livre">
+     <complexType>
+      <sequence>
+       <element ref="bib:chapitre"/>
+      </sequence>
+     </complexType>
+    </element>
+
+    <element name="chapitre"/>
+     

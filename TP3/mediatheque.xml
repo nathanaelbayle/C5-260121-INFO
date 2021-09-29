@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- fichier mediatheque.xml -->
+<mediatheque xmlns="http://mediatheque.org" 
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://mediatheque.org mediatheque.xsd" >
+ <musique> <!-- partie optionnelle mais à occurrence unique -->
+    EEE-354
+ </musique>
+
+</mediatheque>
