@@ -1,0 +1,17 @@
+<!ELEMENT commandes (commande+)>
+<!ELEMENT commande (ligne_commande+, remise?)>
+
+<!ELEMENT ligne_commande EMPTY>
+<!ELEMENT remise EMPTY>
+
+<!ATTLIST commande id ID #REQUIRED>
+<!ATTLIST commande id_client IDREF #REQUIRED>
+<!ATTLIST commande montant CDATA #IMPLIED>
+
+<!ATTLIST ligne_commande 
+            ref_article IDERF #REQUIRED
+            qantite CDATA #REQUIRED
+            prix CDATA #REQUIRED
+            >
+
+<!ATTLIST remise valeur CDATA #REQUIRED>
