@@ -13,9 +13,11 @@ Un document Xml est composé de balises **balises**, elles mêmes possédant pos
 ### Prologue
 
 Il faut **imperativement** inclure le prologue à la première ligne du fichier :
+
 ````xml
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 ````
+
 ### Règles de nommage balise et attibut
 
 - Un nom contient des lettres, des chiffres ou des caractères spéciaux.
@@ -25,11 +27,13 @@ Il faut **imperativement** inclure le prologue à la première ligne du fichier 
 ## Utilisation
 
 Pour appliquer un document **DTD** sur un fichier **XML**, il faut utiliser `xmllint` de la manière suivante :
+
 ````bash
 xmllint document.xml --dtdvalid document.dtd --noout
 ````
 
 Pour appliquer un document **XML Schéma** sur un fichier **XML**, il faut utiliser `xmllint` de la manière suivante :
+
 ````bach
 xmllint --schema document.xsd document.xml --noout
 ````
@@ -48,21 +52,25 @@ Un document **valide** est un document **bien formé conforme à une définition
 ### Contenu 
 
 Commentaire :
+
 ````xml
 <!-- commentaire -->
 ````
 
 Balise simple :
+
 ````xml
 <exemple/>
 ````
 
 Balise par paire :
+
 ````xml
 <exemple> contenu </exemple>
 ````
 
 Balise avec attribut :
+
 ````xml
 <exemple attr="value"> </exemple>
 ````
@@ -88,6 +96,8 @@ In a DTD, **attributes** are declared with an *ATTLIST* declaration.
 <!ATTLIST element-name attribute-name attribute-type attribute-value>
 ````
 
+&nbsp;
+
 The **attribute-type** can be one of the following:
 
 | Type          | Description   |
@@ -110,14 +120,17 @@ The **attribute-value** can be one of the following:
 | Type          | Explanation   | Example |
 | ------------- |-------------|-------------|
 | *value* | The default value of the attribute | `<!ATTLIST square width CDATA "0">` |
-| #REQUIRED | The attribute is required | <!ATTLIST person number CDATA #REQUIRED> |
-| #IMPLIED | The attribute is optional | <!ATTLIST contact fax CDATA #IMPLIED> |
-| #FIXED *value* | The attribute value is fixed | <!ATTLIST sender company CDATA #FIXED "Microsoft"> |
+| #REQUIRED | The attribute is required | `<!ATTLIST person number CDATA #REQUIRED>` |
+| #IMPLIED | The attribute is optional | `<!ATTLIST contact fax CDATA #IMPLIED>` |
+| #FIXED *value* | The attribute value is fixed | `<!ATTLIST sender company CDATA #FIXED "Microsoft">` |
 
 &nbsp;
 
+You can use **enumerated** attribute values when you want the attribute value to be one of a fixed set of legal values.
 
-
+````dtd
+<!ATTLIST element-name attribute-name (en1|en2|..) default-value>
+````
 
 
 
