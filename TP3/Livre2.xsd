@@ -1,0 +1,9 @@
+    <xsd:element name="livre">
+     <xsd:complexType>
+      <xsd:sequence>
+       <xsd:element ref="chapitre"/>
+      </xsd:sequence>
+     </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="chapitre"/>

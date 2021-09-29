@@ -1,0 +1,12 @@
+<listePersonnes xmlns="http://univ.fr" >
+  <enseignant>
+    <nom>Paul</nom>
+    <prenom>Martin</prenom>
+    <grade>MCF</grade>
+  </enseignant>
+  <etudiant>
+    <nom>Pierre</nom>
+    <prenom>Martin</prenom>
+    <inscription>L2</inscription>
+  </etudiant>
+</listePersonnes>
