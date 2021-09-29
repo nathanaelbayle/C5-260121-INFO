@@ -104,8 +104,14 @@ Balise avec attribut :
 | repertoire contient **de 1 à n** personne  | `<!ELEMENT repertoire (personne+)>`     |
 
 &nbsp;
+&nbsp;
+
 
 ## XML Schema
+
+An *XML Schema* describes the structure of an *XML* document. The `<schema>` element is the root element of **every** XML Schema.
+
+#### XSD Example
 ````xml
 <?xml version="1.0"?>
 <xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema" targetNamespace="http://interoperabilnost.hr" xmlns="http://interoperabilnost.hr" elementFormDefault="qualified">
@@ -122,8 +128,16 @@ Balise avec attribut :
 
 <br />
 
-## Simple Types
+## Simple Elements
 
+A simple element can contain only **simple types**. It cannot contain other elements or attributes. 
+
+The syntax for defining a simple element is: 
+
+````xml
+<xs:element name="xs:xxx" type="xs:yyy"/>
+```` 
+The most common types are:
   - `xs:string`
   - `xs:decimal`
   - `xs:integer`
@@ -131,13 +145,60 @@ Balise avec attribut :
   - `xs:date`
   - `xs:time`
 
+Simple elements may have a default value OR a fixed value specified.
+
 ````xml
-<xs:element name="start_date" type="xs:date"/>
+<xs:element name="color" type="xs:string" default="red"/>
 ````
 
+````xml
+<xs:element name="color" type="xs:string" fixed="red"/>
+````
 <br />
 
+## Attributes
+
+The syntax for defining an attribute is:
+
+````xml
+<xs:attribute name="xs:xxx" type="xs:yyy"/>
+````
+
+Attributes are optional by default. To specify that the attribute is required, use the "use" attribute:
+````xml
+<xs:attribute name="lang" type="xs:string" use="required"/>
+````
+
+Attributes may have a default value OR a fixed value specified:
+````xml
+<xs:attribute name="lang" type="xs:string" default="EN"/>
+````
+
+````xml
+<xs:attribute name="lang" type="xs:string" fixed="EN"/>
+````
+
+## Restrictions 
+To **limit** the content of an XML element to a set of acceptable values, we would use the **enumeration** constraint.
+
+````xml
+<xs:element name="car" type="carType"/>
+
+<xs:simpleType name="carType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Audi"/>
+    <xs:enumeration value="Golf"/>
+    <xs:enumeration value="BMW"/>
+  </xs:restriction>
+</xs:simpleType>
+````
+
+
+<br/>
+<br/>
 ## XML Facets
+
+De nouveaux **type simple** peuvent être créés à partit des types prédéfinis en ajoutant des contraintes via un mécanisme appelé **facettes**.
 
   - `xs:minInclusive`
   - `xs:maxInclusive`
@@ -151,6 +212,24 @@ Balise avec attribut :
   - `xs:maxLength`
   - `xs:totalDigits`
   - `xs:fractionDigits`
+
+
+&nbsp;
+Déclaration d'un type de taile fixe :
+
+````xml
+<xsd:simpleType name="typeCodePostal">
+    <xsd:restriction base="xsd:integer">
+	<xsd:length value="5"/>
+    </xsd:restriction>
+</xsd:simpleType>
+<xsd:element name="codePostal" type="typeCodePostal"/>
+
+
+````
+
+
+
 
 ### Min-max
 
@@ -328,6 +407,10 @@ Balise avec attribut :
 ### Boolean
 
 - `xs:boolean`
+
+
+
+
 
 
 
