@@ -80,7 +80,48 @@ Balise avec attribut :
 | repertoire contient **de 0 à n** personne | `<!ELEMENT repertoire (personne*)>`      |
 | repertoire contient **de 1 à n** personne  | `<!ELEMENT repertoire (personne+)>`     |
 
+### Attributes
+
+In a DTD, **attributes** are declared with an *ATTLIST* declaration. 
+
+````dtd
+<!ATTLIST element-name attribute-name attribute-type attribute-value>
+````
+
+The **attribute-type** can be one of the following:
+
+| Type          | Description   |
+| ------------- |-------------|
+| CDATA    | The value is character data |
+| (en1|en2|..) | The value must be one from an enumerated list |
+| ID | The value is a unique id |
+| IDREF | The value is the id of another element |
+| IDREFS | The value is a list of other ids |
+| NMTOKEN | The value is a valid XML name |
+| NMTOKENS | The value is a list of valid XML names |
+| ENTITY | The value is an entity |
+| ENTITIES | The value is a list of entities |
+| NOTATION | The value is a name of a notation |
+
 &nbsp;
+
+The **attribute-value** can be one of the following:
+
+| Type          | Explanation   | Example |
+| ------------- |-------------|-------------|
+| *value* | The default value of the attribute | `<!ATTLIST square width CDATA "0">` |
+| #REQUIRED | The attribute is required | <!ATTLIST person number CDATA #REQUIRED> |
+| #IMPLIED | The attribute is optional | <!ATTLIST contact fax CDATA #IMPLIED> |
+| #FIXED *value* | The attribute value is fixed | <!ATTLIST sender company CDATA #FIXED "Microsoft"> |
+
+&nbsp;
+
+
+
+
+
+
+
 &nbsp;
 
 
