@@ -2,8 +2,39 @@
 
 
 ## Table des Matières
+- [XML](#xml)
+  * [Définition eXtended Markup Langage](#définition-extended-markup-langage)
+  * [Prolog](#prolog)
+  * [Règles de nommage balise et attibut](#règles-de-nommage-balise-et-attibut)
+- [Utilisation](#utilisation)
+- [DTD](#dtd)
+  * [Document Type Definition](#document-type-definition)
+  * [Conformité et validation](#conformité-et-validation)
+  * [Contenu](#contenu)
+    + [ELEMENT](#element)
+  * [Attributes](#attributes)
+- [XML Schema](#xml-schema)
+    + [XSD Example](#xsd-example)
+- [Simple Elements](#simple-elements)
+- [Attributes](#attributes-1)
+- [Restrictions](#restrictions)
+- [XML Facets](#xml-facets)
+  * [Min-max](#min-max)
+  * [Enumeration](#enumeration)
+  * [Pattern](#pattern)
+  * [WhiteSpace](#whitespace)
+- [Complex Elements](#complex-elements)
+  * [Complex Example](#complex-example)
+  * [Empty Element](#empty-element)
+  * [Text only + attribute](#text-only--attribute)
+  * [Integer only + Attirbute + attribute restriction](#integer-only--attirbute--attribute-restriction)
+- [Element Indicators](#element-indicators)
+- [Data Types](#data-types)
+  * [String](#string)
+  * [Date](#date)
+  * [Numeric](#numeric)
+  * [Boolean](#boolean)
 
-##### TODO
 
 ## XML
 ### Définition eXtended Markup Langage
@@ -227,6 +258,7 @@ To **limit** the content of an XML element to a set of acceptable values, we wou
 
 <br/>
 <br/>
+
 ## XML Facets
 
 De nouveaux **type simple** peuvent être créés à partit des types prédéfinis en ajoutant des contraintes via un mécanisme appelé **facettes**.
