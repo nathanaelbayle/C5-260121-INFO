@@ -2,31 +2,8 @@
 
 
 ## Table des Matières
-- [XML](#XML "Goto XML")
-  - [Définition eXtended Markup Langage](#définition-extended-markup-langage "Goto Définition eXtended Markup Langage")
-  - [Prologue](#prologue "Goto Prologue")
-  - [Règles de nommage balise et attibut](#règles-de-nommage-balise-et-attibut "Goto Règles de nommage balise et attibut")
-  - [Utilisation](#utilisation "Goto Utilisation")
-- [DTD](#dtd "Goto dtd")
-  - [Contenu](#contenu "Goto Contenu")
-  - [Element](#element "Goto Element")
-- [XML Schéma](#xml-schema "Goto XML Schema")
-  - [Types Simple](#simple-types "Goto Simple Type")
-  - [XML Facets](#xml-facets "Goto xml-facets")
-	- [Min Max](#min-max "Goto min-max")
-	- [Enumeration](#enumeration "Goto enumeration")
-	- [Pattern](#pattern "Goto pattern")
-	- [Whitespace](#whitespace "Goto whitespace")
-  - [Complex Elements](#complex-elements "Goto complex-elements")
-	- [Exemple](#complex-example "Goto complex-example")
-	- [Empty Element](#empty-element "Goto empty-element")
-	- [Attribut](#text-only--attribute "Goto attribute")
-   - [Element Indicators](#element-indicators "Goto element-indicators")
-   - [Data Types](#data-types "Goto data-types")
-   	 - [String](#string "Goto String")
-   	 - [Date](#date "Goto date")
-   	 - [Numeric](#numeric "Goto numeric")
-   	 - [Boolean](#boolean "Goto boolean")
+
+##### TODO
 
 ## XML
 ### Définition eXtended Markup Langage
