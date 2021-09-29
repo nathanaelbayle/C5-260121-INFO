@@ -10,9 +10,9 @@
 
 Un document Xml est composé de balises **balises**, elles mêmes possédant possédant des **attributs**. Il peut également contenir des **entités**, des **règles d'analyse**, de déclarations d'**espace de nom** (namespace), de **commentaires** et du **texte**.
 
-### Prologue
+### Prolog
 
-Il faut **imperativement** inclure le prologue à la première ligne du fichier :
+The XML prolog is **optional**. If it exists, it must come first in the document.
 
 ````xml
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
@@ -103,7 +103,7 @@ The **attribute-type** can be one of the following:
 | Type          | Description   |
 | ------------- |-------------|
 | CDATA    | The value is character data |
-| (en1|en2|..) | The value must be one from an enumerated list |
+| (en1 \| en2 \| . . . ) | The value must be one from an enumerated list |
 | ID | The value is a unique id |
 | IDREF | The value is the id of another element |
 | IDREFS | The value is a list of other ids |
