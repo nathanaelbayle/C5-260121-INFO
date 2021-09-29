@@ -1,0 +1,23 @@
+<?xml version='1.0' standalone="no" ?>
+<response version="1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <request_index>2</request_index>
+    <data_source name="AAAAAAAAAAAAA"></data_source>
+    <request type="AAAAAAAAAAAAAAAAA"></request>
+    <errors>
+       
+    </errors>
+    <data num_results="4237">
+        <METAR>
+            <raw_text>test1</raw_text>
+            <date>2021-09-26</date>
+        </METAR>
+        <METAR>
+            <raw_text>test2</raw_text>
+            <date>2021-09-27</date>
+        </METAR>
+        <METAR>
+            <raw_text>test3</raw_text>
+            <date>2021-09-28</date>
+        </METAR>
+    </data>
+</response>

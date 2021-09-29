@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<AdresseExpedition type="test" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Nom>
+        <Prenom> test </Prenom>
+        <Patronyme> sdvdsf </Patronyme>
+    </Nom>
+    <Adresse>
+        <Rue> dknfsdn</Rue>
+        <Ville>skdjds</Ville>
+        <CodePostal>1000</CodePostal>
+        <Pays>DE</Pays>
+    </Adresse>
+</AdresseExpedition>
+
+
+

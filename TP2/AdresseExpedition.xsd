@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+ <xsd:element name="AdresseExpedition">
+  <xsd:annotation>
+   <xsd:documentation xml:lang="fr">
+   Ce schema decrit le format d'une adresse d'expedition
+   </xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType>
+   <xsd:sequence>
+    <xsd:element name="Nom"     type="TypeNom"/>
+    <xsd:element name="Adresse" type="TypeAdresse"/>
+   </xsd:sequence>
+   <xsd:attribute name="type"   type="xsd:string"/>
+  </xsd:complexType>
+ </xsd:element>
+
+ <xsd:complexType name="TypeNom">
+  <xsd:sequence>
+   <xsd:element name="Prenom"    type="xsd:string"/>
+   <xsd:element name="Patronyme" type="xsd:string"/>
+  </xsd:sequence>
+ </xsd:complexType>
+
+ <xsd:complexType name="TypeAdresse">
+  <xsd:sequence>
+   <xsd:element name="Rue"        type="xsd:string"/>
+   <xsd:element name="Ville"      type="xsd:string"/>
+   <xsd:element name="CodePostal" type="TypeCodePostal"/>
+   <xsd:element name="Pays"       type="TypePays"/>
+  </xsd:sequence>
+ </xsd:complexType>
+
+ <xsd:simpleType name="TypeCodePostal">
+  <xsd:restriction base="xsd:integer">
+   <xsd:maxExclusive value="100000"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+
+ <xsd:simpleType name="TypePays">
+  <xsd:restriction base="xsd:string">
+   <xsd:length value="2"/>
+  </xsd:restriction>
+ </xsd:simpleType>
+
+</xsd:schema>
