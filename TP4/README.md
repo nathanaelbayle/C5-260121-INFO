@@ -6,8 +6,7 @@ Une expression XPath permet d’accèder aux éléments et aux attributs d’un 
 2. d’obtenir toutes les commandes passées au magasin de Dompierre.
 3. d’obtenir les numéros de toutes les commandes passées au magasin de Dompierre.
 4. donner le nom du client ayant le numéro 1.
-5. d’obtenir les 2 dernières commandes (cela doit fonctionner sur d’autres fichiers de
-commandes respectant la même structure).
+5. d’obtenir les 2 dernières commandes (cela doit fonctionner sur d’autres fichiers de commandes respectant la même structure).
 6. donner le nom du client de la commande 1.
 
 ````xml
@@ -76,3 +75,22 @@ commandes respectant la même structure).
 
 1. `//commande`
 2. `//commande[magasin="Dompierre"]`
+3. `//commande[magasin="Dompierre"]/@nocde`
+4. `//clients[noclient="1"]/Nom/text()`
+5. `//commande[position()=(last()-1) or position()=last()]`
+6. `//clients[noclient=//commande[@nocde="1"]/noduclient]/Nom/text()`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
