@@ -4,7 +4,37 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://mediatheque.org mediatheque.xsd" >
  <musique> <!-- partie optionnelle mais à occurrence unique -->
-    EEE-354
+  <contenu> 2 CD de musique assez variée </contenu>
+   <cd id="AFR-890">
+   <titre>It's a wonderful life</titre>
+   <groupe>Sparklehorse</groupe>
+   <chanson duree='00:05:27'>Eyepennies</chanson>
+   <chanson duree='00:02:46'>Dog door</chanson>
+  </cd>
+  <cd id="ZTP-921">
+   <titre>BOF Le fabuleux destin...</titre>
+   <artiste>
+    <nom>Tiersen</nom>
+    <prenom>Yann</prenom>
+   </artiste>
+   <chanson duree='00:03:54'>A quai</chanson>
+   <chanson duree='00:03:40'>Comptine d'un autre été</chanson>
+  </cd>
  </musique>
-
+ <video> <!-- partie optionnelle mais à occurrence unique -->
+  <dvd id="CWG-211">
+   <titre>2001, Odyssée de l'espace</titre>
+   <annee>1968</annee>
+   <realisateur>S. Kubrick</realisateur>
+  </dvd>
+  <videok7 id="ETF-435">
+   <titre>Les sentiers de la gloire</titre>
+   <annee>1957</annee>
+   <realisateur>S. Kubrick</realisateur>
+  </videok7>
+  <dvd id="POD-453">
+   <titre>Barry Lindon</titre>
+   <realisateur>S. Kubrick</realisateur>
+  </dvd>
+ </video>
 </mediatheque>

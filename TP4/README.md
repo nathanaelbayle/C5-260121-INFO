@@ -5,5 +5,5 @@ Le **XPath** est un lanquage d'expressions permettant de sélectionner des élé
 **XPath** utilise le concept de **chemin de localisation** (*location path*) :
 
 ````xml
-child :: chapter/descendant::section/child::para
+child::chapter/descendant::section/child::para
 ````
