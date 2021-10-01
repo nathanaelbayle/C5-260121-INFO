@@ -1,0 +1,47 @@
+<xs:schema
+    xmlns="http://masterinfo.univlr.fr"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    targetNamespace="http://masterinfo.univlr.fr"
+    attributeFormDefault="qualified"
+    >
+
+<xs:complexType name="FileSystem">
+    <xs:sequence>
+        <xs:element name="directory" type="directory" minOccurs="1">
+            <xs:restriction base="Node">
+                <xs:attribute name="name" type="xs:string" fixed="root"/>
+            </xs:restriction>
+        </xs:element>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="fs" type="FileSystem" />
+
+<xs:complexType name="directory">
+    <xs:complexContent>
+        <xs:extension base="Node">
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:choice>
+                    <xs:element ref="directory" />
+                    <xs:element ref="file" />
+                </xs:choice>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+
+
+<xs:element name="file">
+    <xs:complexType>
+        <xs:complexContent>
+            <xs:extension base="Node" />
+        </xs:complexContent>
+    </xs:complexType>
+</xs:element>
+
+<xs:complexType name="Node">
+    <xs:attribute name="name" type="xs:string" use="required"/>
+</xs:complexType>
+
+</xs:schema>
