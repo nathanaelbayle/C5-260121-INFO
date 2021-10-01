@@ -79,20 +79,3 @@ Une expression XPath permet d’accèder aux éléments et aux attributs d’un 
 4. `//clients[noclient="1"]/Nom/text()`
 5. `//commande[position()=(last()-1) or position()=last()]`
 6. `//clients[noclient=//commande[@nocde="1"]/noduclient]/Nom/text()`
-
-## Utilisation de l’API Java XML Bindings
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
