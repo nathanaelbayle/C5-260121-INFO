@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlType(name = "File")
-@XmlRootElement(name = "File", namespace = "http://masterinfo.univlr.fr")
+@XmlRootElement(name = "file", namespace = "http://masterinfo.univlr.fr")
 public class File extends Node {
 
     public File() {
@@ -16,6 +16,7 @@ public class File extends Node {
         super(name);
     }
 
+    @Override
     public List<Node> getContent() {
         return null;
     }

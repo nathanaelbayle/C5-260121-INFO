@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlType(name = "FileSystem")
-@XmlRootElement(name = "FileSystem", namespace = "http://masterinfo.univlr.fr")
+@XmlRootElement(name = "fs", namespace = "http://masterinfo.univlr.fr")
 public class FileSystem {
 
     @XmlTransient
