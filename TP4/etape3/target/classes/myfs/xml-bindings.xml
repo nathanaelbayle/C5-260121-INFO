@@ -1,0 +1,31 @@
+<xml-bindings xmlns="http://www.eclipse.org/eclipselink/xsds/persistence/oxm" package-name="myfs">
+
+    <xml-schema element-form-default="QUALIFIED" attribute-form-default="QUALIFIED" namespace="http://masterinfo.univlr.fr" />
+
+    <java-types>
+
+        <java-type name="File">
+            <xml-root-element/>
+        </java-type>
+
+        <java-type name="Node">
+            <java-attributes>
+                <xml-attribute java-attribute="name" required="true"/>
+            </java-attributes>
+        </java-type>
+
+        <java-type name="FileSystem">
+            <xml-root-element name="fs"/>
+            <java-attributes>
+                <xml-element java-attribute="rootDir" name="directory" />
+            </java-attributes>
+        </java-type>
+
+        <java-type name="Directory">
+            <xml-root-element/>
+            <java-attributes>
+                <xml-element-ref java-attribute="content"/>
+            </java-attributes>
+        </java-type>
+    </java-types>
+</xml-bindings>
