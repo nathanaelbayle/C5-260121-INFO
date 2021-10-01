@@ -1,12 +1,16 @@
 package myfs;
 
-import java.util.List;
-
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import java.util.List;
 
-@XmlType(name = "File")
-@XmlRootElement(name = "file", namespace = "http://masterinfo.univlr.fr")
+@XmlType( 
+    name = "File"
+)
+@XmlRootElement( 
+    name = "file", 
+    namespace = "http://masterinfo.univlr.fr"
+)
 public class File extends Node {
 
     public File() {
