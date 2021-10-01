@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns1:fs xmlns:ns1="http://masterinfo.univ-lr.fr">
+    <ns1:directory ns1:name="racine" ns1:id="1">
+        <ns1:file ns1:name="foo.txt" ns1:id="2"/>
+        <ns1:directory ns1:name="aDirectory" ns1:id="3">
+            <ns1:file ns1:name="bar.txt" ns1:id="4"/>
+        </ns1:directory>
+        <ns1:symlk ns1:name="bar_sl" ns1:id="6" ns1:link="4"/>
+    </ns1:directory>
+</ns1:fs>

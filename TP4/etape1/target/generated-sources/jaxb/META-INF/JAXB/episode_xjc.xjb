@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.3.2 
+Voir <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
+Généré le : 2021.09.30 à 06:16:27 PM CEST 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://masterinfo.univlr.fr">
+    <schemaBindings map="false">
+      <package name="myfsXML"/>
+    </schemaBindings>
+    <bindings scd="~tns:FileSystem">
+      <class ref="myfsXML.FileSystem"/>
+    </bindings>
+    <bindings scd="tns:directory">
+      <class ref="myfsXML.Directory"/>
+    </bindings>
+    <bindings scd="~tns:Node">
+      <class ref="myfsXML.Node"/>
+    </bindings>
+    <bindings scd="tns:file">
+      <class ref="myfsXML.File"/>
+    </bindings>
+  </bindings>
+</bindings>
+

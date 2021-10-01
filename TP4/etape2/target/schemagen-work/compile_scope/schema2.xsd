@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://masterinfo.univlr.fr">
+
+  <xs:import namespace="http://masterinfo.univlr.fr" schemaLocation="schema1.xsd"/>
+
+  <xs:complexType name="Directory">
+    <xs:complexContent>
+      <xs:extension base="Node">
+        <xs:sequence>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="ns1:Node"/>
+            <xs:element ref="ns1:Directory"/>
+            <xs:element ref="ns1:File"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Node" abstract="true">
+    <xs:sequence/>
+    <xs:attribute name="name" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="File">
+    <xs:complexContent>
+      <xs:extension base="Node">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="FileSystem">
+    <xs:sequence>
+      <xs:element ref="ns1:directory"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

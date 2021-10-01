@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://masterinfo.univlr.fr" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import schemaLocation="schema2.xsd"/>
+
+  <xs:element name="Directory" type="Directory"/>
+
+  <xs:element name="File" type="File"/>
+
+  <xs:element name="FileSystem" type="FileSystem"/>
+
+  <xs:element name="Node" type="Node"/>
+
+  <xs:element name="directory" type="Directory"/>
+
+
+
+
+</xs:schema>
+

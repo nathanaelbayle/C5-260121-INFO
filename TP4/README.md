@@ -74,8 +74,8 @@ Une expression XPath permet d’accèder aux éléments et aux attributs d’un 
 ### Solutions 
 
 1. `//commande`
-2. `//commande[magasin/text()="Dompierre"]`
-3. `//commande[magasin/text()="Dompierre"]/@nocde`
+2. `//commande[magasin="Dompierre"]`
+3. `//commande[magasin="Dompierre"]/@nocde`
 4. `//clients[noclient="1"]/Nom/text()`
 5. `//commande[position()=(last()-1) or position()=last()]`
 6. `//clients[noclient=//commande[@nocde="1"]/noduclient]/Nom/text()`

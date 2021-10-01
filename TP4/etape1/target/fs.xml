@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns1:fs xmlns:ns1="http://masterinfo.univlr.fr">
+    <ns1:directory ns1:name="root">
+        <ns1:file ns1:name="foo.txt"/>
+        <ns1:directory ns1:name="subDirectory">
+            <ns1:file ns1:name="bar.txt"/>
+            <ns1:directory ns1:name="subSubDirectory"/>
+            <ns1:file ns1:name="bar2.txt"/>
+        </ns1:directory>
+    </ns1:directory>
+</ns1:fs>
